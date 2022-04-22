@@ -89,20 +89,31 @@ class menuViewController: BASEACTIVITY {
         AppDelegate.nextScreen = "LOGOUT"
         self.hidemenuCLick()
         if(CheckShowAlert()){
-            if(AppDelegate.showAlert && self.isNotCurrScreenHome()){
+            if(AppDelegate.showAlert && self.isNotCurrScreenHome() && self.checkNextScreen()){
                 ShowAlert(storybId: "LOGIN", vcId: "LOGINNC")
+                self.deletetable(tbl: "ReimbursementEntry")
+                self.deletetable(tbl: "TSEentry")
             }
             else {
+                self.deletetable(tbl: "ReimbursementEntry")
+                self.deletetable(tbl: "TSEentry")
                 self.push(storybId: "LOGIN", vcId: "LOGINNC", vc: self)
             }
         }
     }
     
     func CheckShowAlert() -> Bool{
-        if (AppDelegate.nextScreen == AppDelegate.currScreen ){
+        if (AppDelegate.nextScreen == AppDelegate.currScreen){
             return false
         }
         self.hidemenuCLick()
+        return true
+    }
+    
+    func checkNextScreen() -> Bool{
+        if (AppDelegate.currScreen == "RVRE" || AppDelegate.currScreen == "MYRE" || AppDelegate.currScreen == "REVIEWTS" || AppDelegate.currScreen == "MYTS" || AppDelegate.currScreen == "CALENDAR" ){
+            return false
+        }
         return true
     }
     
@@ -110,7 +121,7 @@ class menuViewController: BASEACTIVITY {
         AppDelegate.nextScreen = "EDITRE"
         self.hidemenuCLick()
         if(CheckShowAlert()){
-        if(AppDelegate.showAlert && self.isNotCurrScreenHome()){
+            if(AppDelegate.showAlert && self.isNotCurrScreenHome() && self.checkNextScreen()){
             ShowAlert(storybId: "EDITREIMBURSEMENT", vcId: "EDITREIMBURSEMENTNC")
         }
         else {
@@ -122,7 +133,7 @@ class menuViewController: BASEACTIVITY {
         AppDelegate.nextScreen = "RVRE"
         self.hidemenuCLick()
         if(CheckShowAlert()){
-        if(AppDelegate.showAlert && self.isNotCurrScreenHome()){
+        if(AppDelegate.showAlert && self.isNotCurrScreenHome() && self.checkNextScreen()){
             ShowAlert(storybId: "REVIEWREIMBURSEMENT", vcId: "REVIEWREIMBURSEMENTNC")
         }
         else {
@@ -134,7 +145,7 @@ class menuViewController: BASEACTIVITY {
         AppDelegate.nextScreen = "MYRE"
         self.hidemenuCLick()
         if(CheckShowAlert()){
-        if(AppDelegate.showAlert && self.isNotCurrScreenHome()){
+        if(AppDelegate.showAlert && self.isNotCurrScreenHome() && self.checkNextScreen()){
             ShowAlert(storybId: "MYREIMBURSEMENT", vcId: "MYREIMBURSEMENTNC")
         }
         else {
@@ -146,7 +157,7 @@ class menuViewController: BASEACTIVITY {
         AppDelegate.nextScreen = "RE"
         self.hidemenuCLick()
         if(CheckShowAlert()){
-        if(AppDelegate.showAlert && self.isNotCurrScreenHome()){
+        if(AppDelegate.showAlert && self.isNotCurrScreenHome() && self.checkNextScreen()){
             ShowAlert(storybId: "REIMBURSEMENTENTRY", vcId: "REIMBURSEMENTENTRYNC")
         }
         else {
@@ -158,7 +169,7 @@ class menuViewController: BASEACTIVITY {
         AppDelegate.nextScreen = "CALENDAR"
         self.hidemenuCLick()
         if(CheckShowAlert()){
-            if(AppDelegate.showAlert && self.isNotCurrScreenHome()){
+            if(AppDelegate.showAlert && self.isNotCurrScreenHome() && self.checkNextScreen()){
                 ShowAlert(storybId: "CALENDAR", vcId: "CALENDARNC")
             }
             else {
@@ -179,7 +190,7 @@ class menuViewController: BASEACTIVITY {
         AppDelegate.nextScreen = "EDITTS"
         self.hidemenuCLick()
         if(CheckShowAlert()){
-            if(AppDelegate.showAlert && self.isNotCurrScreenHome()){
+            if(AppDelegate.showAlert && self.isNotCurrScreenHome() && self.checkNextScreen()){
                 ShowAlert(storybId: "EDITTIMESHEET", vcId: "EDITTIMESHEETNC")
             }
             else {
@@ -192,7 +203,7 @@ class menuViewController: BASEACTIVITY {
         AppDelegate.nextScreen = "REVIEWTS"
         self.hidemenuCLick()
         if(CheckShowAlert()){
-            if(AppDelegate.showAlert && self.isNotCurrScreenHome()){
+            if(AppDelegate.showAlert && self.isNotCurrScreenHome() && self.checkNextScreen()){
                 ShowAlert(storybId: "REVIEWTIMESHEET", vcId: "REVIEWTIMESHEETNC")
             }
             else {
@@ -207,7 +218,7 @@ class menuViewController: BASEACTIVITY {
         AppDelegate.nextScreen = "TS"
         self.hidemenuCLick()
         if(CheckShowAlert()){
-        if(AppDelegate.showAlert && self.isNotCurrScreenHome()){
+        if(AppDelegate.showAlert && self.isNotCurrScreenHome() && self.checkNextScreen()){
             ShowAlert(storybId: "TIMESHEETENTRY", vcId: "TIMESHEETENTRYNC")
         }
         else {
@@ -220,7 +231,7 @@ class menuViewController: BASEACTIVITY {
         AppDelegate.nextScreen = "HOME"
         self.hidemenuCLick()
         if(CheckShowAlert()){
-        if(AppDelegate.showAlert && self.isNotCurrScreenHome()){
+        if(AppDelegate.showAlert && self.isNotCurrScreenHome() && self.checkNextScreen()){
             ShowAlert(storybId: "HOME", vcId: "HOMENC")
         }
         else {
@@ -233,7 +244,7 @@ class menuViewController: BASEACTIVITY {
         AppDelegate.nextScreen = "MYTS"
         self.hidemenuCLick()
         if(CheckShowAlert()){
-        if(AppDelegate.showAlert && self.isNotCurrScreenHome()){
+        if(AppDelegate.showAlert && self.isNotCurrScreenHome() && self.checkNextScreen()){
             ShowAlert(storybId: "MYTIMESHEET", vcId: "MYTIMESHEETNC")
         }
         else {

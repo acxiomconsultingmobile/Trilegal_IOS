@@ -327,7 +327,7 @@ public class BASEACTIVITY: EXECUTEAPI {
     }
     
     func setnav(controller: UIViewController, title: String , spacing : CGFloat) {
-           
+        
            let titleStackView: UIStackView = {
                let titleLabel = UILabel()
                titleLabel.textAlignment = .left
@@ -337,16 +337,13 @@ public class BASEACTIVITY: EXECUTEAPI {
                titleLabel.textColor = UIColor.white
               // titleLabel.numberOfLines = 2
                
-               let subtitleLabel = UILabel()
+                let subtitleLabel = UILabel()
                 subtitleLabel.text = setName()
                subtitleLabel.textAlignment = .right
-               
                subtitleLabel.font = UIFont(name: "Whitney", size: 16)
-
                subtitleLabel.textColor = UIColor.white
-             
                subtitleLabel.isUserInteractionEnabled = false
-               
+            
                let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
                stackView.spacing = spacing
                NSLayoutConstraint.activate([
@@ -365,10 +362,53 @@ public class BASEACTIVITY: EXECUTEAPI {
            controller.navigationController?.navigationBar.barTintColor =  appColor
            controller.navigationController?.navigationBar.backgroundColor =  appColor
            controller.navigationItem.titleView = titleStackView
-        if(!(title == "Home")) {
+           if(!(title == "Home")) {
             AppDelegate.showAlert = true
-        }
+           }
+        
        }
+    func setnavReview(controller: UIViewController, title: String , spacing : CGFloat) {
+        
+           let titleStackView: UIStackView = {
+               let titleLabel = UILabel()
+               titleLabel.textAlignment = .left
+               titleLabel.font = UIFont(name: "Whitney", size: 14)
+               // titleLabel.font = .boldSystemFont(ofSize: 14)
+               titleLabel.text = title
+               titleLabel.textColor = UIColor.white
+              // titleLabel.numberOfLines = 2
+               
+                let subtitleLabel = UILabel()
+                subtitleLabel.text = setName()
+               subtitleLabel.textAlignment = .right
+               subtitleLabel.font = UIFont(name: "Whitney", size: 14)
+               subtitleLabel.textColor = UIColor.white
+               subtitleLabel.isUserInteractionEnabled = false
+            
+               let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel])
+               stackView.spacing = spacing
+               NSLayoutConstraint.activate([
+                   stackView.heightAnchor.constraint(equalToConstant: navigationController?.navigationBar.frame.height ?? 35),
+               ])
+               stackView.axis = .horizontal
+               stackView.sizeToFit()
+               
+               stackView.alignment = .top
+               stackView.distribution = .fillProportionally
+               
+               return stackView
+           }()
+           let appColor = hexStringToUIColor(hex:"#003366")
+           controller.navigationController?.navigationBar.tintColor =  appColor
+           controller.navigationController?.navigationBar.barTintColor =  appColor
+           controller.navigationController?.navigationBar.backgroundColor =  appColor
+           controller.navigationItem.titleView = titleStackView
+           if(!(title == "Home")) {
+            AppDelegate.showAlert = true
+           }
+        
+       }
+
     
     public func getCurrentShortDate() -> String {
         var todaysDate = NSDate()

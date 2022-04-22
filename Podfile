@@ -9,5 +9,8 @@ target 'Trilegal' do
  
  pod 'FSCalendar'
  pod 'MaterialComponents','~> 103.1.0'
-
+ pod 'GoogleAnalytics'
+ pod 'Firebase/Crashlytics'
+ pod 'Firebase/Core'
+ pod 'Firebase/Analytics'
 end

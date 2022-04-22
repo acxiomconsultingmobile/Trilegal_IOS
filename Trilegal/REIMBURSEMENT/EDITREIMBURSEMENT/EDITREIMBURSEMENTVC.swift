@@ -237,7 +237,13 @@ class EDITREIMBURSEMENTVC: BASEACTIVITY , UITableViewDataSource , UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         AppDelegate.currScreen = "EDITRE"
-        self.setnav(controller: self, title: "Edit Reimbursement          " , spacing : 30)
+        if(setName().count>15){
+            self.setnav(controller: self, title: "Edit Reimbursement" , spacing : 10)
+        }
+        else{
+            self.setnav(controller: self, title: "Edit Reimbursement          " , spacing : 30)
+        }
+
         setUpSideBar()
         setImageForBtnOutlet(button: selectAllBtnOutlet)
         setPaymentDropDownMyReimbursement(paymentDropDown: paymentDropDown)
@@ -250,9 +256,10 @@ class EDITREIMBURSEMENTVC: BASEACTIVITY , UITableViewDataSource , UITableViewDel
     //MARK:- DATE PICKER
     func DatePickerEdit(){
         datePicker1 = UIDatePicker()
+        datePicker1?.preferredDatePickerStyle = .wheels
         datePicker1?.datePickerMode = .date
-        datePicker1?.maximumDate = Date()
-        let toolbar = UIToolbar();
+        datePicker1?.maximumDate = Date()        
+        let toolbar = UIToolbar()
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker1));
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
@@ -427,7 +434,7 @@ class EDITREIMBURSEMENTVC: BASEACTIVITY , UITableViewDataSource , UITableViewDel
         let filePath = urls[0]
         let fileData = try! Data.init(contentsOf: filePath)
         let fileStream:String = fileData.base64EncodedString(options: NSData.Base64EncodingOptions.init(rawValue: 0))
-            self.insertAttachmentFileDetails(filename: filePath.lastPathComponent, fileStr: fileStream, id: popupId, post: "0", extensionStr: filePath.pathExtension, fileid: getuid())
+            self.insertAttachmentFileDetails(filename: filePath.lastPathComponent, fileStr: fileStream, id: popupId, post: "0", extensionStr: "." +  filePath.pathExtension, fileid: getuid())
             edtisAttachment = "1"
             edtNofileChoosenTxt.text = "File Selected"
             edtsetTabledataAttachment(uid: popupId)
@@ -489,10 +496,10 @@ class EDITREIMBURSEMENTVC: BASEACTIVITY , UITableViewDataSource , UITableViewDel
             self.showtoast(controller: self, message: "Please Select Expense Category", seconds: 1.0)
             validate = false
         }
-//        if((self.isInvalidateCostCenter(str: edtcostCenterDropDown.text!))){
-//            self.showtoast(controller: self, message: "Please Select Cost Center", seconds: 1.0)
-//            validate = false
-//        }
+        if(((edtcostCenterDropDown.text!.isEmpty == false) && self.isInvalidateCostCenter(str: edtcostCenterDropDown.text!))){
+            self.showtoast(controller: self, message: "Please Select Valid Cost Center", seconds: 1.0)
+            validate = false
+        }
         if(edtremarksTxtView.text!.isEmpty || edtremarksTxtView.text == "Enter Remarks"){
             self.showtoast(controller: self, message: "Please Enter Remarks", seconds: 1.0)
             validate = false

@@ -3,7 +3,7 @@
 
 //  Created by Acxiom Consulting on 11/05/21.
 //  Copyright © 2021 Acxiom Consulting. All rights reserved.
-
+// datePicker?.preferredDatePickerStyle = .wheels
 import UIKit
 import SQLite3
 
@@ -191,7 +191,13 @@ class TIMESHEETENTRYVC: BASEACTIVITY , UITextViewDelegate , UITableViewDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         AppDelegate.currScreen = "TS"
-        self.setnav(controller: self, title: "Timesheet Entry              " , spacing : 30)
+        //40
+        if(setName().count>15){
+            self.setnav(controller: self, title: "Timesheet Entry" , spacing : 20)
+        }
+        else{
+            self.setnav(controller: self, title: "Timesheet Entry              " , spacing : 30)
+        }
         self.download(date: self.getdate(format: "yyyy-MM-dd"))
         dateTxtField.text! = self.getdate(format: "yyyy-MM-dd")
         datePicker?.date
@@ -319,8 +325,11 @@ class TIMESHEETENTRYVC: BASEACTIVITY , UITextViewDelegate , UITableViewDelegate 
     func DatePicker (){
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .date
+        datePicker?.preferredDatePickerStyle = .wheels
         datePicker2 = UIDatePicker()
+        datePicker2?.preferredDatePickerStyle = .wheels
         datePicker2?.datePickerMode = .time
+        
         if (UserDefaults.standard.string(forKey: "startdate") != nil && UserDefaults.standard.string(forKey: "startdate") != ""){
             let mindate = self.strtodate(str: self.setFromDate(), format: "yyyy-MM-dd")
             datePicker?.minimumDate = mindate
@@ -469,8 +478,10 @@ class TIMESHEETENTRYVC: BASEACTIVITY , UITextViewDelegate , UITableViewDelegate 
     }
     func datePickerPoup (){
         datePicker3 = UIDatePicker()
+        datePicker3?.preferredDatePickerStyle = .wheels
         datePicker3?.datePickerMode = .date
         datePicker4 = UIDatePicker()
+        datePicker4?.preferredDatePickerStyle = .wheels
         datePicker4?.datePickerMode = .time
         datePicker4?.locale = Locale.init(identifier: "en_gb")
         
@@ -949,22 +960,23 @@ class TIMESHEETENTRYVC: BASEACTIVITY , UITextViewDelegate , UITableViewDelegate 
         if(matterDropDown.text?.count == 0 || self.getmatterid(str: self.matterDropDown.text!) == "-1"){
             self.showtoast(controller: self, message: "Please Select Matter", seconds: 1.0)
             validate = false
-            
         }
         if(dateTxtField.text?.count == 0){
             self.showtoast(controller: self, message: "Please Select Date", seconds: 1.0)
             validate = false
-            
         }
         if(timeTxtField.text?.count == 0){
             self.showtoast(controller: self, message: "Please Select Time", seconds: 1.0)
+            validate = false
+        }
+        if(timeTxtField.text == "00:00"){
+            self.showtoast(controller: self, message: "00:00 Time not allowed", seconds: 1.0)
             validate = false
         }
         if(narrationTxtView.text!.isEmpty || narrationTxtView.text == "Please Add Narration"){
             self.showtoast(controller: self, message: "Please Enter Narration", seconds: 1.0)
             validate = false
         }
-        
         return validate
     }
     
@@ -986,6 +998,10 @@ class TIMESHEETENTRYVC: BASEACTIVITY , UITextViewDelegate , UITableViewDelegate 
         }
         if(timePopupTxtField.text!.isEmpty || timePopupTxtField.text == "HH:MM"){
             self.showtoast(controller: self, message: "Please Select Time", seconds: 1.0)
+            validate = false
+        }
+        if(timePopupTxtField.text == "00:00"){
+            self.showtoast(controller: self, message: "00:00 Time not allowed", seconds: 1.0)
             validate = false
         }
         if(narrationDetailsTxtView.text!.isEmpty || narrationDetailsTxtView.text == "Narration"){
@@ -1026,9 +1042,21 @@ class TIMESHEETENTRYVC: BASEACTIVITY , UITextViewDelegate , UITableViewDelegate 
         if(!(narrationPopupTxtView.text == "Add Narration")){
             narrationTxtView.text = narrationPopupTxtView.text
             self.narrationView.isHidden = true
+            view.endEditing(true)
         }
         else {
             self.showtoast(controller: self, message: "Please Enter Narration", seconds: 1.0)
         }
+    }
+}
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }

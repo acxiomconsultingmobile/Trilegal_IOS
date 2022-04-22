@@ -6,6 +6,9 @@
 //  Copyright © 2021 Acxiom Consulting. All rights reserved.
 
 import UIKit
+import Firebase
+import FirebaseCrashlytics
+
 class HOMEVC: BASEACTIVITY {
 
     @IBOutlet weak var timesheetEntry: UIView!
@@ -17,7 +20,6 @@ class HOMEVC: BASEACTIVITY {
     @IBOutlet weak var reviewReimbursement: UIView!
     @IBOutlet weak var editReimbursement: UIView!
     @IBOutlet weak var myCalendar: UIView!
-    
     override func viewWillAppear(_ animated: Bool) {
         sync_check()
     }
@@ -26,11 +28,17 @@ class HOMEVC: BASEACTIVITY {
         super.viewDidLoad()
         AppDelegate.currScreen = "HOME"
         navigationController?.setNavigationBarHidden(false, animated: true)
-        self.setnav(controller: self, title: "Home" , spacing : 150)
+        if(setName().count>15){
+            self.setnav(controller: self, title: "Home" , spacing : 100)
+        }
+        else{
+            self.setnav(controller: self, title: "Home" , spacing : 150)
+        }
         setUpSideBar()
         getOnClick()
-       
     }
+    
+    
     func sync_check(){
         if (self.getdate (format: "yyyy-MM-dd") != UserDefaults.standard.string(forKey: "syncdate") || UserDefaults.standard.string(forKey: "yyyy-MM-dd") == nil){
             self.api = 0

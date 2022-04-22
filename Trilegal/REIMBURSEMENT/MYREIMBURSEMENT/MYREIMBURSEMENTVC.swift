@@ -114,7 +114,13 @@ class MYREIMBURSEMENTVC: BASEACTIVITY , UITableViewDelegate , UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         AppDelegate.currScreen = "MYRE"
-        self.setnav(controller: self, title: "My Reimbursement        " , spacing : 30)
+        if(setName().count>15){
+            self.setnav(controller: self, title: "My Reimbursement" , spacing : 10)
+        }
+        else{
+            self.setnav(controller: self, title: "My Reimbursement        " , spacing : 30)
+        }
+
         setUpSideBar()
         setDates()
         DatePicker()
@@ -174,13 +180,15 @@ class MYREIMBURSEMENTVC: BASEACTIVITY , UITableViewDelegate , UITableViewDataSou
     //MARK:- DATE PICKER
     func DatePicker (){
         datePicker = UIDatePicker()
+        datePicker?.preferredDatePickerStyle = .wheels
         datePicker?.datePickerMode = .date
         datePicker2 = UIDatePicker()
+        datePicker2?.preferredDatePickerStyle = .wheels
         datePicker2?.datePickerMode = .date
         datePicker?.maximumDate = self.date
         datePicker2?.maximumDate = self.date
-        let toolbar = UIToolbar();
-        let toolbar1 = UIToolbar();
+        let toolbar = UIToolbar()
+        let toolbar1 = UIToolbar()
         toolbar.sizeToFit()
         toolbar1.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));

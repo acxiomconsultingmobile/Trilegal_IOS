@@ -6,6 +6,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
-    
+        FirebaseApp.configure()
+        
         let navigationBarAppearace = UINavigationBar.appearance()
         
         let appColor = hexStringToUIColor(hex:"#003366")
@@ -45,6 +47,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIBarButtonItem().isEnabled = false
         navigationBarAppearace.setTitleVerticalPositionAdjustment(CGFloat(7), for: UIBarMetrics.default)
 
+//        let gai = GAI.sharedInstance()
+////        else {
+////          assert(false, "Google Analytics not configured correctly")
+////          print()
+////        }
+//        gai!.tracker(withTrackingId: "G-S1NTL2ZG0P")
+//        // Optional: automatically report uncaught exceptions.
+//        gai!.trackUncaughtExceptions = true
+
+        // Optional: set Logger to VERBOSE for debug information.
+        // Remove before app release.
+   //     gai.logger.logLevel = .verbose;
 
         return true
     }

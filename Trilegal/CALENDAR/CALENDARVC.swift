@@ -17,7 +17,13 @@ class CALENDARVC: BASEACTIVITY , FSCalendarDataSource, FSCalendarDelegate , FSCa
     @IBOutlet weak var upperView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setnav(controller: self, title: "My Calendar        " , spacing : 80)
+        if(setName().count>15){
+            self.setnav(controller: self, title: "My Calendar" , spacing : 40)
+        }
+        else{
+            self.setnav(controller: self, title: "My Calendar        " , spacing : 80)
+        }
+
         AppDelegate.currScreen = "CALENDAR"
         self.deletetable(tbl: "calendar")
         setUpSideBar()

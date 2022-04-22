@@ -3,6 +3,8 @@
 //
 //  Created by Acxiom Consulting on 11/05/21.
 //  Copyright © 2021 Acxiom Consulting. All rights reserved.
+//        datePicker2?.preferredDatePickerStyle = .wheels
+
 //MARK:- IMPORTS
 
 import UIKit
@@ -323,7 +325,13 @@ class REIMBURSEMENTENTRYVC: BASEACTIVITY , UITableViewDataSource , UITableViewDe
     
     //MARK:- INIT DATA
     func initData(){
-        self.setnav(controller: self, title: "Reimbursement Entry       " , spacing : 30)
+        if(setName().count>15){
+            self.setnavReview(controller: self, title: "Reimbursement Entry" , spacing : 10)
+        }
+        else{
+            self.setnav(controller: self, title: "Reimbursement Entry       " , spacing : 30)
+        }
+
         AppDelegate.currScreen = "RE"
         dateTextField.text! = getCurrentShortDateRem()
         setUpSideBar()
@@ -512,11 +520,10 @@ class REIMBURSEMENTENTRYVC: BASEACTIVITY , UITableViewDataSource , UITableViewDe
             self.showtoast(controller: self, message: "Please Select Expense Category", seconds: 1.0)
             validate = false
         }
-//        if(!(costCenterDropDown.text == "--Select--")){
-//            if(self.isInvalidateCostCenter(str: costCenterDropDown.text!))){
-//            self.showtoast(controller: self, message: "Please Select Cost Center", seconds: 1.0)
-//            validate = false
-//        }
+        if(((costCenterDropDown.text!.isEmpty == false) && self.isInvalidateCostCenter(str: costCenterDropDown.text!))){
+            self.showtoast(controller: self, message: "Please Select Valid Cost Center", seconds: 1.0)
+            validate = false
+        }
         if(remarksTxtView.text!.isEmpty || remarksTxtView.text == "Enter Remarks"){
             self.showtoast(controller: self, message: "Please Enter Remarks", seconds: 1.0)
             validate = false
@@ -655,6 +662,7 @@ class REIMBURSEMENTENTRYVC: BASEACTIVITY , UITableViewDataSource , UITableViewDe
     //MARK:- DATE PICKER
     func DatePicker (){
         datePicker = UIDatePicker()
+        datePicker?.preferredDatePickerStyle = .wheels
         datePicker?.datePickerMode = .date
         datePicker?.maximumDate = Date()
         let toolbar = UIToolbar();
@@ -679,6 +687,7 @@ class REIMBURSEMENTENTRYVC: BASEACTIVITY , UITableViewDataSource , UITableViewDe
     //MARK:- DATE PICKER
     func DatePickerEdit(){
         datePicker1 = UIDatePicker()
+        datePicker1?.preferredDatePickerStyle = .wheels
         datePicker1?.datePickerMode = .date
         datePicker1?.maximumDate = Date()
         let toolbar = UIToolbar();
@@ -929,43 +938,6 @@ class REIMBURSEMENTENTRYVC: BASEACTIVITY , UITableViewDataSource , UITableViewDe
         }
     }
     
-    //MARK:- VALIDATION
-    func validateEditView() -> Bool {
-        var validate : Bool = true
-        if(edtdateTextField.text!.isEmpty || edtdateTextField.text == "DD/MMM/YYYY"){
-            self.showtoast(controller: self, message: "Please Select Date", seconds: 1.0)
-            validate = false
-        }
-        if(edtpaymentTypeDropDown.text!.isEmpty || edtpaymentTypeDropDown.text == "--Select--"){
-            self.showtoast(controller: self, message: "Please Select Payment Type", seconds: 1.0)
-            validate = false
-        }
-        if(edtcorporateCardDropDown.isUserInteractionEnabled == true  && (edtcorporateCardDropDown.text!.isEmpty || edtcorporateCardDropDown.text == "--Select--")){
-            self.showtoast(controller: self, message: "Please Select Corporate Card", seconds: 1.0)
-            validate = false
-        }
-        if(edtclientDropDown.isUserInteractionEnabled == true  && (edtclientDropDown.text!.isEmpty || edtclientDropDown.text == "--Select--")){
-            self.showtoast(controller: self, message: "Please Select Client", seconds: 1.0)
-            validate = false
-        }
-        if(edtmatterDropDown.isUserInteractionEnabled == true && (edtmatterDropDown.text!.isEmpty || edtmatterDropDown.text == "--Select--")){
-            self.showtoast(controller: self, message: "Please Select Matter", seconds: 1.0)
-            validate = false
-        }
-        if(edtexpenseCatgDropDown.text!.isEmpty || edtexpenseCatgDropDown.text == "--Select--"){
-            self.showtoast(controller: self, message: "Please Select Expense Category", seconds: 1.0)
-            validate = false
-        }
-        if(edtremarksTxtView.text!.isEmpty || edtremarksTxtView.text == "Enter Remarks"){
-            self.showtoast(controller: self, message: "Please Enter Remarks", seconds: 1.0)
-            validate = false
-        }
-        if(edtamountTextField.text!.isEmpty){
-            self.showtoast(controller: self, message: "Please Enter Amount", seconds: 1.0)
-            validate = false
-        }
-        return validate
-    }
     func showDetailsView(){
         ispopEnable = true
         self.detailsView.isHidden = false
@@ -1000,13 +972,13 @@ class REIMBURSEMENTENTRYVC: BASEACTIVITY , UITableViewDataSource , UITableViewDe
 //        print(filePath.lastPathComponent)
 //        print(filePath.pathExtension)
         if(ispopEnable){
-            self.insertAttachmentFileDetails(filename: filePath.lastPathComponent, fileStr: fileStream, id: popupId, post: "0", extensionStr: filePath.pathExtension, fileid: getuid())
+            self.insertAttachmentFileDetails(filename: filePath.lastPathComponent, fileStr: fileStream, id: popupId, post: "0", extensionStr: "." + filePath.pathExtension, fileid: getuid())
             edtisAttachment = "1"
             edtNofileChoosenTxt.text = "File Selected"
             edtsetTabledataAttachment(uid: popupId)
         }
         else{
-        self.insertAttachmentFileDetails(filename: filePath.lastPathComponent, fileStr: fileStream, id: uniqueId, post: "0", extensionStr: filePath.pathExtension, fileid: getuid())
+        self.insertAttachmentFileDetails(filename: filePath.lastPathComponent, fileStr: fileStream, id: uniqueId, post: "0", extensionStr: "." + filePath.pathExtension, fileid: getuid())
             isAttachment = "1"
             NofileChoosenTxt.text = "File Selected"
             setTabledataAttachment(uid: uniqueId)
@@ -1350,10 +1322,10 @@ class REIMBURSEMENTENTRYVC: BASEACTIVITY , UITableViewDataSource , UITableViewDe
             self.showtoast(controller: self, message: "Please Select Expense Category", seconds: 1.0)
             validate = false
         }
-//        if((self.isInvalidateCostCenter(str: edtcostCenterDropDown.text!))){
-//            self.showtoast(controller: self, message: "Please Select Cost Center", seconds: 1.0)
-//            validate = false
-//        }
+        if(((edtcostCenterDropDown.text!.isEmpty == false) && self.isInvalidateCostCenter(str: edtcostCenterDropDown.text!))){
+            self.showtoast(controller: self, message: "Please Select Valid Cost Center", seconds: 1.0)
+            validate = false
+        }
         if(edtremarksTxtView.text!.isEmpty || edtremarksTxtView.text == "Enter Remarks"){
             self.showtoast(controller: self, message: "Please Enter Remarks", seconds: 1.0)
             validate = false

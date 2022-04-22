@@ -5,17 +5,35 @@
 //  Copyright © 2021 Acxiom Consulting. All rights reserved.
 
 import UIKit
+
+
 class LOGINVC: BASEACTIVITY {
     var isCheck = false
     @IBOutlet weak var checkBoxOutlet:UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationController?.setNavigationBarHidden(true, animated: true)
         setCheckBoxImage()
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        self.versionlbl.text = CONSTANT.APP_VR_TEXT + appVersion!
         
+        if (CONSTANT.base_url.contains("timesheet.trilegal.com:8084")){
+            self.con_lbl.text = "PROD"
+        }else if(CONSTANT.base_url.contains("52.172.203.197:8084")){
+            self.con_lbl.text = "UAT"
+        }else{
+            self.con_lbl.text = "-"
+        }
+                
+        
+//        MARK:- Comment here
+        self.usernamelbl.text = "acxiom1@trilegal.com"            //acxi0om3
+        self.pwdlbl.text = "welcome@123"              //welcome@123
     }
     
+    @IBOutlet var con_lbl: UILabel!
+    @IBOutlet var versionlbl: UILabel!
     @IBOutlet var usernamelbl: UITextField!
     @IBOutlet var pwdlbl: UITextField!
     

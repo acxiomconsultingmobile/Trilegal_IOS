@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gat-QE-pgi">
-                                <rect key="frame" x="37.5" y="83.5" width="300" height="500"/>
+                                <rect key="frame" x="50" y="83.5" width="300" height="500"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="vNg-FE-4xz">
                                         <rect key="frame" x="10" y="10" width="280" height="480"/>
@@ -309,10 +309,10 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQo-99-VeW">
-                                <rect key="frame" x="37.5" y="133.5" width="300" height="400"/>
+                                <rect key="frame" x="50" y="144" width="300" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="2u0-Ml-7tG">
-                                        <rect key="frame" x="10" y="10" width="280" height="380"/>
+                                        <rect key="frame" x="10" y="10" width="280" height="180"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Narration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D63-jI-Dr1">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
@@ -324,7 +324,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Add Narration" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="59E-jX-1Hs">
-                                                <rect key="frame" x="0.0" y="43" width="280" height="294"/>
+                                                <rect key="frame" x="0.0" y="43" width="280" height="94"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
@@ -334,7 +334,7 @@
                                                 </connections>
                                             </textView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iNd-gV-iiL">
-                                                <rect key="frame" x="0.0" y="340" width="280" height="40"/>
+                                                <rect key="frame" x="0.0" y="140" width="280" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fd-KU-gjx">
                                                         <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
@@ -370,18 +370,18 @@
                                     <constraint firstAttribute="bottom" secondItem="2u0-Ml-7tG" secondAttribute="bottom" constant="10" id="JBF-Xo-IaV"/>
                                     <constraint firstAttribute="width" constant="300" id="JD1-ZQ-aUg"/>
                                     <constraint firstAttribute="trailing" secondItem="2u0-Ml-7tG" secondAttribute="trailing" constant="10" id="L6I-ls-wEN"/>
-                                    <constraint firstAttribute="height" constant="400" id="TCl-VA-53v"/>
+                                    <constraint firstAttribute="height" constant="200" id="TCl-VA-53v"/>
                                     <constraint firstItem="2u0-Ml-7tG" firstAttribute="leading" secondItem="tQo-99-VeW" secondAttribute="leading" constant="10" id="kzn-Tr-tgz"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yCP-sm-XWR">
-                                <rect key="frame" x="20" y="54" width="335" height="603"/>
+                                <rect key="frame" x="20" y="54" width="360" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fmy-HY-YBf">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="395.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="395.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Client" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rxe-N1-FNH" customClass="DropDown" customModule="Trilegal_TS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="360" height="34"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -400,7 +400,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Matter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qN-U2-eDX" customClass="DropDown" customModule="Trilegal_TS" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="47" width="335" height="34"/>
+                                                <rect key="frame" x="0.0" y="47" width="360" height="34"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -419,19 +419,19 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aqA-fs-brG">
-                                                <rect key="frame" x="0.0" y="94" width="335" height="50"/>
+                                                <rect key="frame" x="0.0" y="94" width="360" height="50"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TN4-WL-dIf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpP-wr-rZ7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="25"/>
                                                                 <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="14"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD/MMM/YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tFa-PU-8F3">
-                                                                <rect key="frame" x="0.0" y="25" width="162.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="25" width="175" height="25"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -439,16 +439,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RIc-Ti-QEk">
-                                                        <rect key="frame" x="172.5" y="0.0" width="162.5" height="50"/>
+                                                        <rect key="frame" x="185" y="0.0" width="175" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFE-Dn-Cmh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="25"/>
                                                                 <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="14"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HH:MM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RhF-5P-vNQ">
-                                                                <rect key="frame" x="0.0" y="25" width="162.5" height="25"/>
+                                                                <rect key="frame" x="0.0" y="25" width="175" height="25"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -461,19 +461,19 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wKL-uf-6fN">
-                                                <rect key="frame" x="0.0" y="157.5" width="335" height="30"/>
+                                                <rect key="frame" x="0.0" y="157.5" width="360" height="30"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="auW-wz-Lmm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPm-H8-dgg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="97.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="14"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-84-4e5" customClass="SwiftySwitch" customModule="Trilegal_TS" customModuleProvider="target">
-                                                                <rect key="frame" x="102.5" y="0.0" width="60" height="30"/>
+                                                                <rect key="frame" x="115" y="0.0" width="60" height="30"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="2p1-iQ-qyj"/>
@@ -513,16 +513,16 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nP0-Tq-rVm">
-                                                        <rect key="frame" x="172.5" y="0.0" width="162.5" height="30"/>
+                                                        <rect key="frame" x="185" y="0.0" width="175" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Off Consel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3j-Zf-Y2D">
-                                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="14"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McK-bA-Gwq" customClass="SwiftySwitch" customModule="Trilegal_TS" customModuleProvider="target">
-                                                                <rect key="frame" x="97.5" y="0.0" width="60" height="30"/>
+                                                                <rect key="frame" x="110" y="0.0" width="60" height="30"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="xmV-SF-HS8"/>
@@ -553,7 +553,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqo-N8-ohK">
-                                                                <rect key="frame" x="162.5" y="0.0" width="0.0" height="30"/>
+                                                                <rect key="frame" x="175" y="0.0" width="0.0" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" id="JWw-fU-TBo"/>
                                                                 </constraints>
@@ -576,25 +576,25 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="87k-Ev-1QD">
-                                                <rect key="frame" x="0.0" y="200.5" width="335" height="195"/>
+                                                <rect key="frame" x="0.0" y="200.5" width="360" height="195"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fCf-rn-GqX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="100"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Narration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAt-lb-v8h">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="23"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="360" height="23"/>
                                                                 <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQd-qc-ea7">
-                                                                <rect key="frame" x="0.0" y="25" width="335" height="75"/>
+                                                                <rect key="frame" x="0.0" y="25" width="360" height="75"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="1Zg-vl-Foq">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="75"/>
                                                                         <subviews>
                                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please Add Narration" translatesAutoresizingMaskIntoConstraints="NO" id="xgI-Um-gPQ">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="301" height="75"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="326" height="75"/>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="75" id="sT1-42-wbH"/>
@@ -607,7 +607,7 @@
                                                                                 </connections>
                                                                             </textView>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="pLr-ob-ZOH">
-                                                                                <rect key="frame" x="303" y="0.0" width="32" height="75"/>
+                                                                                <rect key="frame" x="328" y="0.0" width="32" height="75"/>
                                                                                 <subviews>
                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiU-kY-xFd">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
@@ -648,16 +648,16 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="KZJ-9o-ycM">
-                                                        <rect key="frame" x="0.0" y="105" width="335" height="30"/>
+                                                        <rect key="frame" x="0.0" y="105" width="360" height="30"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9V-Vg-dDL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="360" height="30"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CCG-8h-OoC">
-                                                                        <rect key="frame" x="50" y="0.0" width="235" height="30"/>
+                                                                        <rect key="frame" x="50" y="0.0" width="260" height="30"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9u-Cx-FAm">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
                                                                                 <color key="backgroundColor" red="0.99216943980000005" green="0.39609891180000001" blue="0.2039497495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                                 <state key="normal" title="ADD">
@@ -668,7 +668,7 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fn-P6-ckU">
-                                                                                <rect key="frame" x="127.5" y="0.0" width="107.5" height="30"/>
+                                                                                <rect key="frame" x="140" y="0.0" width="120" height="30"/>
                                                                                 <color key="backgroundColor" red="0.99216943980000005" green="0.39609891180000001" blue="0.2039497495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="9"/>
                                                                                 <state key="normal" title="RESET">
@@ -700,20 +700,20 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="2H9-Rw-PRW">
-                                                        <rect key="frame" x="0.0" y="140" width="335" height="35"/>
+                                                        <rect key="frame" x="0.0" y="140" width="360" height="35"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4WJ-BW-634">
-                                                                <rect key="frame" x="0.0" y="0.0" width="65.5" height="35"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="70.5" height="35"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5S-ob-zh1">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="65.5" height="17.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="17.5"/>
                                                                         <color key="backgroundColor" red="0.0" green="0.60788303610000005" blue="0.78029257060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upK-0b-zhe">
-                                                                        <rect key="frame" x="0.0" y="17.5" width="65.5" height="17.5"/>
+                                                                        <rect key="frame" x="0.0" y="17.5" width="70.5" height="17.5"/>
                                                                         <color key="backgroundColor" red="0.0" green="0.60788303610000005" blue="0.78029257060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -722,17 +722,17 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="a9U-rB-Hkw">
-                                                                <rect key="frame" x="67.5" y="0.0" width="65.5" height="35"/>
+                                                                <rect key="frame" x="72.5" y="0.0" width="70.5" height="35"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRz-XR-jbh">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="65.5" height="17.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="17.5"/>
                                                                         <color key="backgroundColor" red="0.069728977979999995" green="0.64708930249999996" blue="0.03524217382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yd-8I-zzS">
-                                                                        <rect key="frame" x="0.0" y="17.5" width="65.5" height="17.5"/>
+                                                                        <rect key="frame" x="0.0" y="17.5" width="70.5" height="17.5"/>
                                                                         <color key="backgroundColor" red="0.069728977979999995" green="0.64708930249999996" blue="0.03524217382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -741,17 +741,17 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bYs-vt-eXP">
-                                                                <rect key="frame" x="135" y="0.0" width="65" height="35"/>
+                                                                <rect key="frame" x="145" y="0.0" width="70" height="35"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rejected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fh-8M-VKV">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="17.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="17.5"/>
                                                                         <color key="backgroundColor" red="0.79217392210000004" green="0.20393511650000001" blue="0.2078480124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxU-Wc-JvU">
-                                                                        <rect key="frame" x="0.0" y="17.5" width="65" height="17.5"/>
+                                                                        <rect key="frame" x="0.0" y="17.5" width="70" height="17.5"/>
                                                                         <color key="backgroundColor" red="0.79217392210000004" green="0.20393511650000001" blue="0.2078480124" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -760,17 +760,17 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Mx4-8K-Nbc">
-                                                                <rect key="frame" x="202" y="0.0" width="65.5" height="35"/>
+                                                                <rect key="frame" x="217" y="0.0" width="70.5" height="35"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submitted" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5w-SA-cMa">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="65.5" height="17.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="17.5"/>
                                                                         <color key="backgroundColor" red="0.26658719780000001" green="0.41570788619999999" blue="0.2195753157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C26-tF-McX">
-                                                                        <rect key="frame" x="0.0" y="17.5" width="65.5" height="17.5"/>
+                                                                        <rect key="frame" x="0.0" y="17.5" width="70.5" height="17.5"/>
                                                                         <color key="backgroundColor" red="0.26658719780000001" green="0.41570788619999999" blue="0.2195753157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -779,17 +779,17 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1Xe-N9-Jg2">
-                                                                <rect key="frame" x="269.5" y="0.0" width="65.5" height="35"/>
+                                                                <rect key="frame" x="289.5" y="0.0" width="70.5" height="35"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Submitted" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNS-0K-nDG">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="65.5" height="17.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="17.5"/>
                                                                         <color key="backgroundColor" red="0.99216872450000004" green="0.40394216779999997" blue="0.18435090779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qK-oH-thu">
-                                                                        <rect key="frame" x="0.0" y="17.5" width="65.5" height="17.5"/>
+                                                                        <rect key="frame" x="0.0" y="17.5" width="70.5" height="17.5"/>
                                                                         <color key="backgroundColor" red="0.99216872450000004" green="0.40394216779999997" blue="0.18435090779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -803,7 +803,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhH-62-44o">
-                                                        <rect key="frame" x="0.0" y="180" width="335" height="15"/>
+                                                        <rect key="frame" x="0.0" y="180" width="360" height="15"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5m-24-b0d">
                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="15"/>
@@ -817,7 +817,7 @@
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select All" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dq0-wU-2Tc">
-                                                                <rect key="frame" x="30" y="0.0" width="305" height="15"/>
+                                                                <rect key="frame" x="30" y="0.0" width="330" height="15"/>
                                                                 <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -832,25 +832,25 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UEP-aB-8mt">
-                                        <rect key="frame" x="0.0" y="405.5" width="335" height="197.5"/>
+                                        <rect key="frame" x="0.0" y="405.5" width="360" height="197.5"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8aY-UP-pmM">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="157.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="360" height="157.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimeSheeetEntryCell" id="F96-o5-M1g" customClass="TimeSheeetEntryCell" customModule="Trilegal_TS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="335" height="130.5"/>
+                                                        <rect key="frame" x="0.0" y="24.5" width="360" height="130.5"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F96-o5-M1g" id="n5D-8W-MTg">
-                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="130.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="360" height="130.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAP-G7-iOn" customClass="CardView" customModule="Trilegal_TS" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="130.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="360" height="130.5"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rAs-GO-157">
-                                                                            <rect key="frame" x="0.0" y="2" width="331" height="126.5"/>
+                                                                            <rect key="frame" x="0.0" y="2" width="356" height="126.5"/>
                                                                             <subviews>
                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vh-fg-fdO">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
@@ -863,22 +863,22 @@
                                                                                     </connections>
                                                                                 </button>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Tyw-gF-nmt">
-                                                                                    <rect key="frame" x="32" y="0.0" width="257" height="126.5"/>
+                                                                                    <rect key="frame" x="32" y="0.0" width="282" height="126.5"/>
                                                                                     <subviews>
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n0q-qF-zzu">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="257" height="42"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="282" height="42"/>
                                                                                             <subviews>
                                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VrS-fb-4tw">
-                                                                                                    <rect key="frame" x="0.0" y="0.0" width="128.5" height="42"/>
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="141" height="42"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwQ-WY-0z7">
-                                                                                                            <rect key="frame" x="0.0" y="0.0" width="128.5" height="21"/>
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="141" height="21"/>
                                                                                                             <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                             <nil key="highlightedColor"/>
                                                                                                         </label>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXT-sY-nms">
-                                                                                                            <rect key="frame" x="0.0" y="21" width="128.5" height="21"/>
+                                                                                                            <rect key="frame" x="0.0" y="21" width="141" height="21"/>
                                                                                                             <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
                                                                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                             <nil key="highlightedColor"/>
@@ -886,16 +886,16 @@
                                                                                                     </subviews>
                                                                                                 </stackView>
                                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5Os-kf-hbu">
-                                                                                                    <rect key="frame" x="128.5" y="0.0" width="128.5" height="42"/>
+                                                                                                    <rect key="frame" x="141" y="0.0" width="141" height="42"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcY-eP-Hvo">
-                                                                                                            <rect key="frame" x="0.0" y="0.0" width="128.5" height="21"/>
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="141" height="21"/>
                                                                                                             <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                             <nil key="highlightedColor"/>
                                                                                                         </label>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matter Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TA5-Oc-AlU">
-                                                                                                            <rect key="frame" x="0.0" y="21" width="128.5" height="21"/>
+                                                                                                            <rect key="frame" x="0.0" y="21" width="141" height="21"/>
                                                                                                             <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
                                                                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                             <nil key="highlightedColor"/>
@@ -905,19 +905,19 @@
                                                                                             </subviews>
                                                                                         </stackView>
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fcO-Wb-nlY">
-                                                                                            <rect key="frame" x="0.0" y="42" width="257" height="42.5"/>
+                                                                                            <rect key="frame" x="0.0" y="42" width="282" height="42.5"/>
                                                                                             <subviews>
                                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cf5-p1-tfu">
-                                                                                                    <rect key="frame" x="0.0" y="0.0" width="128.5" height="42.5"/>
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="141" height="42.5"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE5-wW-faC">
-                                                                                                            <rect key="frame" x="0.0" y="0.0" width="128.5" height="21.5"/>
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="141" height="21.5"/>
                                                                                                             <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                             <nil key="highlightedColor"/>
                                                                                                         </label>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPn-Km-2rW">
-                                                                                                            <rect key="frame" x="0.0" y="21.5" width="128.5" height="21"/>
+                                                                                                            <rect key="frame" x="0.0" y="21.5" width="141" height="21"/>
                                                                                                             <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
                                                                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                             <nil key="highlightedColor"/>
@@ -925,16 +925,16 @@
                                                                                                     </subviews>
                                                                                                 </stackView>
                                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YLN-3S-amD">
-                                                                                                    <rect key="frame" x="128.5" y="0.0" width="128.5" height="42.5"/>
+                                                                                                    <rect key="frame" x="141" y="0.0" width="141" height="42.5"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwT-rz-aai">
-                                                                                                            <rect key="frame" x="0.0" y="0.0" width="128.5" height="21.5"/>
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="141" height="21.5"/>
                                                                                                             <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                             <nil key="highlightedColor"/>
                                                                                                         </label>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hL3-um-PUW">
-                                                                                                            <rect key="frame" x="0.0" y="21.5" width="128.5" height="21"/>
+                                                                                                            <rect key="frame" x="0.0" y="21.5" width="141" height="21"/>
                                                                                                             <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
                                                                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                             <nil key="highlightedColor"/>
@@ -944,19 +944,19 @@
                                                                                             </subviews>
                                                                                         </stackView>
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XVZ-rI-sQf">
-                                                                                            <rect key="frame" x="0.0" y="84.5" width="257" height="42"/>
+                                                                                            <rect key="frame" x="0.0" y="84.5" width="282" height="42"/>
                                                                                             <subviews>
                                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RUn-c2-ifm">
-                                                                                                    <rect key="frame" x="0.0" y="0.0" width="257" height="42"/>
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="282" height="42"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Narration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ND5-sk-b2w">
-                                                                                                            <rect key="frame" x="0.0" y="0.0" width="257" height="21"/>
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="282" height="21"/>
                                                                                                             <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                             <nil key="highlightedColor"/>
                                                                                                         </label>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Narration text" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTA-Vk-7hR">
-                                                                                                            <rect key="frame" x="0.0" y="21" width="257" height="21"/>
+                                                                                                            <rect key="frame" x="0.0" y="21" width="282" height="21"/>
                                                                                                             <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="12"/>
                                                                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                             <nil key="highlightedColor"/>
@@ -964,7 +964,7 @@
                                                                                                     </subviews>
                                                                                                 </stackView>
                                                                                                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="u4b-Nb-Izd">
-                                                                                                    <rect key="frame" x="257" y="0.0" width="0.0" height="42"/>
+                                                                                                    <rect key="frame" x="282" y="0.0" width="0.0" height="42"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yys-Gq-AIJ">
                                                                                                             <rect key="frame" x="0.0" y="0.0" width="0.0" height="21"/>
@@ -985,7 +985,7 @@
                                                                                     </subviews>
                                                                                 </stackView>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="z29-Cb-b8P">
-                                                                                    <rect key="frame" x="291" y="0.0" width="40" height="22"/>
+                                                                                    <rect key="frame" x="316" y="0.0" width="40" height="22"/>
                                                                                     <subviews>
                                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VO7-hr-Wgr">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="19" height="22"/>
@@ -1055,16 +1055,16 @@
                                                 </connections>
                                             </tableView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="QXv-zd-F3Z">
-                                                <rect key="frame" x="0.0" y="167.5" width="335" height="30"/>
+                                                <rect key="frame" x="0.0" y="167.5" width="360" height="30"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yy-LT-LIB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="30"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="828-A5-Ebu">
-                                                                <rect key="frame" x="50" y="0.0" width="235" height="30"/>
+                                                                <rect key="frame" x="50" y="0.0" width="260" height="30"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aW9-uw-YrE">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
                                                                         <color key="backgroundColor" red="0.99216943980000005" green="0.39609891180000001" blue="0.2039497495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                         <state key="normal" title="SAVE">
@@ -1075,7 +1075,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkI-G2-9ld">
-                                                                        <rect key="frame" x="127.5" y="0.0" width="107.5" height="30"/>
+                                                                        <rect key="frame" x="140" y="0.0" width="120" height="30"/>
                                                                         <color key="backgroundColor" red="0.99216943980000005" green="0.39609891180000001" blue="0.2039497495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
                                                                         <state key="normal" title="SUBMIT">
@@ -1131,13 +1131,14 @@
                         <viewLayoutGuide key="safeArea" id="z4N-mc-pOU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="z4N-mc-pOU" firstAttribute="trailing" secondItem="tQo-99-VeW" secondAttribute="trailing" constant="50" id="386-Az-FXD"/>
                             <constraint firstItem="gat-QE-pgi" firstAttribute="centerY" secondItem="OxO-od-bgb" secondAttribute="centerY" id="3FP-q8-SfZ"/>
                             <constraint firstItem="yCP-sm-XWR" firstAttribute="leading" secondItem="z4N-mc-pOU" secondAttribute="leading" constant="20" id="KY8-Xi-6g2"/>
-                            <constraint firstItem="tQo-99-VeW" firstAttribute="centerX" secondItem="OxO-od-bgb" secondAttribute="centerX" id="Rud-CI-zFe"/>
                             <constraint firstItem="z4N-mc-pOU" firstAttribute="trailing" secondItem="yCP-sm-XWR" secondAttribute="trailing" constant="20" id="T0y-P1-5j7"/>
-                            <constraint firstItem="tQo-99-VeW" firstAttribute="centerY" secondItem="OxO-od-bgb" secondAttribute="centerY" id="e3h-bq-wwP"/>
+                            <constraint firstItem="tQo-99-VeW" firstAttribute="top" secondItem="z4N-mc-pOU" secondAttribute="top" constant="100" id="gHv-3Q-PLI"/>
                             <constraint firstItem="yCP-sm-XWR" firstAttribute="top" secondItem="z4N-mc-pOU" secondAttribute="top" constant="10" id="ggc-Og-Z0L"/>
                             <constraint firstItem="gat-QE-pgi" firstAttribute="centerX" secondItem="OxO-od-bgb" secondAttribute="centerX" id="kqO-Ii-gWn"/>
+                            <constraint firstItem="tQo-99-VeW" firstAttribute="leading" secondItem="z4N-mc-pOU" secondAttribute="leading" constant="50" id="tpu-ym-IlL"/>
                             <constraint firstItem="z4N-mc-pOU" firstAttribute="bottom" secondItem="yCP-sm-XWR" secondAttribute="bottom" constant="10" id="zLx-te-FvF"/>
                         </constraints>
                     </view>

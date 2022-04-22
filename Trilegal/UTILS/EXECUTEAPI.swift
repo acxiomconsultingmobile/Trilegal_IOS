@@ -38,8 +38,9 @@ public class EXECUTEAPI : DBConnection {
             case .success(let value): print("success======> \(value)")
                 
                 if let json = value as? [String:Any]{
-                    let response = json["Response"] as! [String:Any]
-                    let status = response["status"] as! Int
+                      let response = json["Response"] as! [String:Any]
+                      let status = response["status"] as! Int
+
                     if (status == 1){
                         self.VD()
                         let data = json["Data"] as! [String:Any]
@@ -65,21 +66,21 @@ public class EXECUTEAPI : DBConnection {
     public func VD(){}
     //    MARK:- GET CLIENT MATTER
     func getClientMatterData(){
-        
+        self.deletetable(tbl: "ClientMaster")
         CONSTANT.apicall += 1
-        
         let url = CONSTANT.base_url + CONSTANT.client_matter_url + UserDefaults.standard.string(forKey: "userid")! + "&csPassword=" + UserDefaults.standard.string(forKey: "pwd")!
         AF.request(url, method: .post).validate().responseJSON {
             response in
-            
             switch response.result {
             case .success(let value):
                 print("response --> \(value)")
                 if let json = value as? [String:Any]{
                     let response = json["Response"] as! [String:Any]
                     let status = response["status"] as! Int
+                    let msg = json["msg"] as? String
                     if (status == 1){
-                        let data = json["Data"] as! [[String:Any]]
+                      if  let data = json["Data"] as? [[String:Any]]
+                      {
                         self.deletetable(tbl: "ClientMaster")
                         for obj in data {
                             let MatterCode = obj["MatterCode"]! as! String
@@ -90,8 +91,11 @@ public class EXECUTEAPI : DBConnection {
                             
                             self.insertclientmaster(MatterCode: MatterCode, MatterDesc: MatterDesc.contains("'") ? MatterDesc.replacingOccurrences(of: "'", with: "''") :  MatterDesc, MatterType: "\(MatterType)", ClientCode: ClientCode, ClientDesc: ClientDesc.contains("'") ? ClientDesc.replacingOccurrences(of: "'", with: "''") :  ClientDesc)
                         }
+                      }
                         self.VD()
-                    }else{
+                    }
+                    
+                    else{
                         CONSTANT.failapi += 1
                         self.VD()
                     }
@@ -383,6 +387,7 @@ public class EXECUTEAPI : DBConnection {
                 "Narrations"  :  narration,
                 "Offcouncil" : isoffc == "1" ? true : false,
                 "IsChargable" :  isbill,
+                "Id" : uid
             ]
             array.append(param)
         }
@@ -437,7 +442,7 @@ public class EXECUTEAPI : DBConnection {
                        let response = json["Response"] as! [String:Any]
                        let status = response["status"] as! Int
                        if (status == 1){
-                           let data = json["Data"] as! [[String:Any]]
+                        if let data = json["Data"] as? [[String:Any]]{
                            self.deletetable(tbl: "GetRMClientMatter")
                            for obj in data {
                                let MatterCode = obj["MatterCode"]! as! String
@@ -447,17 +452,21 @@ public class EXECUTEAPI : DBConnection {
                                let ClientDesc = obj["ClientDesc"]! as! String
                                
                             self.insertRemClientMatter(MatterCode: MatterCode, MatterDesc: MatterDesc.replacingOccurrences(of: "'", with: ""), MatterType: "\(MatterType)", ClientCode: ClientCode, ClientDesc: ClientDesc.replacingOccurrences(of: "'", with: ""))
+                            }
                            }
+                           self.insertionCompleted()
                            self.VD()
                        }else{
+                           self.insertionCompleted()
                            CONSTANT.failapi += 1
                            self.VD()
                        }
                    }
-
                    break
-               case .failure(let error): print("error======> \(error)")
+               case .failure(let error):
+                   print("error======> \(error)")
                    print("Error")
+                   self.insertionCompleted()
                    CONSTANT.failapi += 1
                    self.VD()
                    break
@@ -959,7 +968,7 @@ public class EXECUTEAPI : DBConnection {
  
  public func post_Rem(type: Int,isedit: Bool ){
     var transId : String = ""
-     let url = CONSTANT.base_url + "SaveReimbursement"
+     let url = CONSTANT.base_url + "SaveReimbursementV2"
      var array : [Any]
      var body : [String: Any]
      var param : [String: Any]
@@ -1031,6 +1040,7 @@ public class EXECUTEAPI : DBConnection {
              "ResourceName" : ResourceName,
              "StatusId"  :  StatusId,
              "RejectedRemarks" : RejectedRemarks,
+            "Id" : uid,
             "FileArray" : getFiledetails(Id: uid, Expensenumber: ExpenseNumber, isEditbool: isedit) as [AnyObject],
          ]
          array.append(param)

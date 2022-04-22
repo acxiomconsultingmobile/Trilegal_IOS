@@ -151,7 +151,12 @@ class EDITTIMESHEETVC: BASEACTIVITY  , UITableViewDelegate , UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         AppDelegate.currScreen = "EDITTS"
-        self.setnav(controller: self, title: "Edit Timesheet               " , spacing : 30)
+        if(setName().count>15){
+            self.setnav(controller: self, title: "Edit Timesheet" , spacing : 30)
+        }
+        else{
+            self.setnav(controller: self, title: "Edit Timesheet               " , spacing : 30)
+        }
         
         setUpSideBar()
         //  rightSideBtn.title = setName()
@@ -307,8 +312,7 @@ class EDITTIMESHEETVC: BASEACTIVITY  , UITableViewDelegate , UITableViewDataSour
     
     override func INVD(msg: String) {
         self.hideindicator()
-        self.showmsg(msg: "Please  try again later!!")
-        self.showToast(message: msg)        
+        self.showToast(message: msg)
     }
     
     private  func setData(){
@@ -398,8 +402,10 @@ class EDITTIMESHEETVC: BASEACTIVITY  , UITableViewDelegate , UITableViewDataSour
     var date = Date()
     func DatePicker (){
         datePicker = UIDatePicker()
+        datePicker?.preferredDatePickerStyle = .wheels
         datePicker?.datePickerMode = .date
         datePicker2 = UIDatePicker()
+        datePicker2?.preferredDatePickerStyle = .wheels
         datePicker2?.datePickerMode = .time
         if (UserDefaults.standard.string(forKey: "startdate") != nil && UserDefaults.standard.string(forKey: "startdate") != ""){
             let mindate = self.strtodate(str: self.setFromDate(), format: "yyyy-MM-dd")
@@ -609,15 +615,17 @@ class EDITTIMESHEETVC: BASEACTIVITY  , UITableViewDelegate , UITableViewDataSour
         if(matterDropDown.text?.count == 0 || self.getmatterid(str: self.matterDropDown.text!) == "-1"){
             self.showtoast(controller: self, message: "Please Select Matter", seconds: 1.0)
             validate = false
-            
         }
         if(datetxtField.text?.count == 0){
             self.showtoast(controller: self, message: "Please Select Date", seconds: 1.0)
             validate = false
-            
         }
         if(timeTxtField.text?.count == 0){
             self.showtoast(controller: self, message: "Please Select Time", seconds: 1.0)
+            validate = false
+        }
+        if(timeTxtField.text == "00:00"){
+            self.showtoast(controller: self, message: "00:00 Time not allowed", seconds: 1.0)
             validate = false
         }
         if(narrationTxtView.text!.isEmpty || narrationTxtView.text == "Please Add Narration"){

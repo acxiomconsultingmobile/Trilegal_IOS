@@ -975,7 +975,7 @@
                                                                 <rect key="frame" x="127.5" y="0.0" width="107.5" height="30"/>
                                                                 <color key="backgroundColor" red="0.99216943980000005" green="0.39609891180000001" blue="0.2039497495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="Whitney-Book" family="Whitney" pointSize="10"/>
-                                                                <state key="normal" title="SAVE &amp; SUBMIT">
+                                                                <state key="normal" title="SUBMIT">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -1055,7 +1055,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T57-VO-Pw7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="69.715142428785612"/>
+            <point key="canvasLocation" x="967" y="16"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gRP-ip-sCw">

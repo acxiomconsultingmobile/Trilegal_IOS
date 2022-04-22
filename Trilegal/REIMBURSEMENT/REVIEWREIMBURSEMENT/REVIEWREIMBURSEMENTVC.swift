@@ -189,7 +189,13 @@ class REVIEWREIMBURSEMENTVC: BASEACTIVITY , UITableViewDataSource , UITableViewD
         super.viewDidLoad()
         AppDelegate.currScreen = "RVRE"
         firstBool = true
-        self.setnav(controller: self, title: "Review Reimbursement" , spacing : 30)
+        if(setName().count>15){
+            self.setnavReview(controller: self, title: "Review Reimbursement" , spacing : 5)
+        }
+        else{
+            self.setnav(controller: self, title: "Review Reimbursement" , spacing : 30)
+        }
+
         setUpSideBar()
         self.view.addSubview(rejectView)
         self.rejectView.layer.borderColor = UIColor.lightGray.cgColor

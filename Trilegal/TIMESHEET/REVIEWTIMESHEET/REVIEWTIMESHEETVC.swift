@@ -120,7 +120,14 @@ class REVIEWTIMESHEETVC:  BASEACTIVITY , UITableViewDataSource , UITableViewDele
         setUpSideBar()
         AppDelegate.currScreen = "REVIEWTS"
 
-        self.setnav(controller: self, title: "Review Timesheet              " , spacing : 30)
+        
+        if(setName().count>15){
+            self.setnav(controller: self, title: "Review Timesheet" , spacing : 20)
+        }
+        else{
+            self.setnav(controller: self, title: "Review Timesheet              " , spacing : 30)
+        }
+
 
     //    rightSideBtn.title = setName()
         borderToView()

@@ -33,6 +33,8 @@
 		D86E821E266168CD00A62F24 /* EditReimbursementAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86E821D266168CD00A62F24 /* EditReimbursementAdapter.swift */; };
 		D86E8220266168E100A62F24 /* EditReimbursementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86E821F266168E100A62F24 /* EditReimbursementCell.swift */; };
 		D870CA2D265D60850084A4EC /* DIYCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D870CA2C265D60850084A4EC /* DIYCalendarCell.swift */; };
+		D87693E526AFE9AF00497CB1 /* BridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D87693E426AFE9AF00497CB1 /* BridgingHeader.m */; };
+		D87693E726B0093700497CB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D87693E626B0093700497CB1 /* GoogleService-Info.plist */; };
 		D8771DD4265E769100DC0B81 /* ReviewReimbursementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8771DD3265E769100DC0B81 /* ReviewReimbursementCell.swift */; };
 		D8771DD6265E76AA00DC0B81 /* ReviewReimbursementAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8771DD5265E76AA00DC0B81 /* ReviewReimbursementAdapter.swift */; };
 		D8771DD8265EB54200DC0B81 /* MyTimeSheetAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8771DD7265EB54200DC0B81 /* MyTimeSheetAdapter.swift */; };
@@ -104,6 +106,9 @@
 		D86E821D266168CD00A62F24 /* EditReimbursementAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReimbursementAdapter.swift; sourceTree = "<group>"; };
 		D86E821F266168E100A62F24 /* EditReimbursementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReimbursementCell.swift; sourceTree = "<group>"; };
 		D870CA2C265D60850084A4EC /* DIYCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYCalendarCell.swift; sourceTree = "<group>"; };
+		D87693E326AFE9AF00497CB1 /* Trilegal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Trilegal-Bridging-Header.h"; sourceTree = "<group>"; };
+		D87693E426AFE9AF00497CB1 /* BridgingHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgingHeader.m; sourceTree = "<group>"; };
+		D87693E626B0093700497CB1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8771DD3265E769100DC0B81 /* ReviewReimbursementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewReimbursementCell.swift; sourceTree = "<group>"; };
 		D8771DD5265E76AA00DC0B81 /* ReviewReimbursementAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewReimbursementAdapter.swift; sourceTree = "<group>"; };
 		D8771DD7265EB54200DC0B81 /* MyTimeSheetAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimeSheetAdapter.swift; sourceTree = "<group>"; };
@@ -274,6 +279,7 @@
 		D85DE2212636B7EF00C766AD /* UTILS */ = {
 			isa = PBXGroup;
 			children = (
+				D87693E626B0093700497CB1 /* GoogleService-Info.plist */,
 				D86CA34826733F1D0099B4E2 /* Reachability.swift */,
 				D87FF16D2660147500989168 /* whitneybook.otf */,
 				D89A953626382B370005A6E6 /* EXECUTEAPI.swift */,
@@ -287,6 +293,8 @@
 				D8BAC96C266A3828001DFC95 /* CONSTANT.swift */,
 				D866EB27267656C900E651E7 /* DBConnection.swift */,
 				D8A58729269F508100ABAAB7 /* DocumentPicker.swift */,
+				D87693E426AFE9AF00497CB1 /* BridgingHeader.m */,
+				D87693E326AFE9AF00497CB1 /* Trilegal-Bridging-Header.h */,
 			);
 			path = UTILS;
 			sourceTree = "<group>";
@@ -406,6 +414,7 @@
 				D85DE1EB2636940100C766AD /* Frameworks */,
 				D85DE1EC2636940100C766AD /* Resources */,
 				E0DD09B1BD0D8B2BD0E53932 /* [CP] Embed Pods Frameworks */,
+				D87693F026B051A800497CB1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -432,6 +441,7 @@
 				TargetAttributes = {
 					D85DE1ED2636940100C766AD = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -474,6 +484,7 @@
 				D87FF16E2660147500989168 /* whitneybook.otf in Resources */,
 				D80E62DA2642D9DE001BFA60 /* CALENDAR.storyboard in Resources */,
 				D8811BC7264A997600955693 /* REIMBURSEMENTENTRY.storyboard in Resources */,
+				D87693E726B0093700497CB1 /* GoogleService-Info.plist in Resources */,
 				D85DE1F92636940100C766AD /* Main.storyboard in Resources */,
 				D80E62DD2642DBB1001BFA60 /* EDITTIMESHEET.storyboard in Resources */,
 				D85DE2232636BD5E00C766AD /* LOGIN.storyboard in Resources */,
@@ -505,6 +516,25 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D87693F026B051A800497CB1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/FirebaseCrashlytics/run\n";
 		};
 		E0DD09B1BD0D8B2BD0E53932 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -556,6 +586,7 @@
 				D85DE2252636BD7D00C766AD /* SPLASHVC.swift in Sources */,
 				D8811BC5264A996000955693 /* REIMBURSEMENTENTRYVC.swift in Sources */,
 				D899B194265C01CD00AA26F4 /* TimeSheeetEntryCell.swift in Sources */,
+				D87693E526AFE9AF00497CB1 /* BridgingHeader.m in Sources */,
 				D86E8220266168E100A62F24 /* EditReimbursementCell.swift in Sources */,
 				D8BAC96D266A3828001DFC95 /* CONSTANT.swift in Sources */,
 				D89A953726382B370005A6E6 /* EXECUTEAPI.swift in Sources */,
@@ -635,7 +666,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -721,22 +752,25 @@
 			baseConfigurationReference = E47F97AEC58B3BBFD09F8682 /* Pods-Trilegal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = T3YWA5D992;
 				INFOPLIST_FILE = Trilegal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = net.mobile.trilegal.Trilegal;
 				PRODUCT_NAME = "Trilegal TS";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trilegal/UTILS/Trilegal-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -745,22 +779,24 @@
 			baseConfigurationReference = F8C292E7C4889C6A85CF0F0E /* Pods-Trilegal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = T3YWA5D992;
 				INFOPLIST_FILE = Trilegal/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = net.mobile.trilegal.Trilegal;
 				PRODUCT_NAME = "Trilegal TS";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trilegal/UTILS/Trilegal-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

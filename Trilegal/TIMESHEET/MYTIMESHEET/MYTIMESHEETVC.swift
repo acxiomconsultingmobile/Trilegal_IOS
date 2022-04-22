@@ -98,7 +98,13 @@ class MYTIMESHEETVC: BASEACTIVITY , UITableViewDelegate , UITableViewDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
        AppDelegate.currScreen = "MYTS"
-        self.setnav(controller: self, title: "My Timesheet               " , spacing : 30)
+        if(setName().count>15){
+            self.setnav(controller: self, title: "My Timesheet" , spacing : 30)
+        }
+        else{
+            self.setnav(controller: self, title: "My Timesheet               " , spacing : 30)
+        }
+
         
         setUpSideBar()
        // rightSideBtn.title = setName()
@@ -264,8 +270,10 @@ class MYTIMESHEETVC: BASEACTIVITY , UITableViewDelegate , UITableViewDataSource 
     //MARK:- DATE PICKER
     func DatePicker (){
         datePicker = UIDatePicker()
+        datePicker?.preferredDatePickerStyle = .wheels
         datePicker?.datePickerMode = .date
         datePicker2 = UIDatePicker()
+        datePicker2?.preferredDatePickerStyle = .wheels
         datePicker2?.datePickerMode = .date
         
         let formatter = DateFormatter()

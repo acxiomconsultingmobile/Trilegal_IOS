@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -193,6 +193,7 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="2ND-wp-zal"/>
                                             <constraint firstItem="5g2-uG-wlu" firstAttribute="centerX" secondItem="gFE-im-uqz" secondAttribute="centerX" id="Vci-3k-iIc"/>
                                             <constraint firstAttribute="bottom" secondItem="5g2-uG-wlu" secondAttribute="bottom" id="WVp-5T-7R0"/>
                                             <constraint firstItem="5g2-uG-wlu" firstAttribute="leading" secondItem="gFE-im-uqz" secondAttribute="leading" constant="100" id="WW1-P8-Vzk"/>
@@ -207,7 +208,7 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyTimesheetCell" id="iBw-4b-q0D" customClass="MyTimesheetCell" customModule="Trilegal_TS" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="335" height="94"/>
+                                                        <rect key="frame" x="0.0" y="24.5" width="335" height="94"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iBw-4b-q0D" id="MTM-6I-Nvy">
                                                             <rect key="frame" x="0.0" y="0.0" width="335" height="94"/>
@@ -396,7 +397,7 @@
                                     <constraint firstAttribute="trailing" secondItem="gFE-im-uqz" secondAttribute="trailing" id="QA7-am-ykd"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAG-2o-Yse">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAG-2o-Yse">
                                 <rect key="frame" x="37.5" y="83.5" width="300" height="500"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="left" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVs-49-bQ2">
